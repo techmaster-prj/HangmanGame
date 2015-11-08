@@ -1,0 +1,87 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>       
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+	<!-- lbHangman -->
+	<style name="lbHangman" parent="AppTheme">
+	    <item name="android:textSize">@dimen/font_size_main</item>
+	    <item name="android:paddingTop">20dp</item>
+	    <item name="android:textColor">#003f56</item>
+	    <item name="android:gravity">center</item>
+	</style>
+	<style name="lbMain" parent="AppTheme">
+	    <item name="android:background">#00000000</item>
+	    <item name="android:textSize">@dimen/font_size_main</item>
+	    <item name="android:textColor">@drawable/text_color</item>
+	    <item name="android:gravity">center</item>
+	</style>
+	<style name="lbLevel" parent="AppTheme">
+	    <item name="android:background">#00000000</item>
+	    <item name="android:textSize">@dimen/font_size_header</item>
+	    <item name="android:textColor">#017c8b</item>
+	    <item name="android:gravity">center</item>
+	</style>
+	<style name="lbRank" parent="AppTheme">
+	    <item name="android:textSize">@dimen/font_size_rank</item>
+	    <item name="android:textColor">#017c8b</item>
+	</style>
+	<style name="lbRank_item" parent="AppTheme">
+	    <item name="android:textSize">@dimen/font_size_rank_detail</item>
+	    <item name="android:textColor">#017c8b</item>
+	</style>
+	<style name="lbGame" parent="AppTheme">
+	    <item name="android:textSize">@dimen/font_size_game</item>
+	    <item name="android:textColor">#017c8b</item>
+	</style>
+	<style name="lbGame_item" parent="AppTheme">
+	    <item name="android:textSize">@dimen/font_size_game_item</item>
+	    <item name="android:textColor">#333776</item>
+	</style>
+	<style name="lbGame_item_red" parent="lbGame_item">
+	    <item name="android:textColor">#d50000</item>
+	</style>
+	<style name="btnHelp" parent="AppTheme">
+	    <item name="android:layout_width">@dimen/width_game</item>
+	    <item name="android:layout_height">@dimen/width_game</item>
+	    <item name="android:background">@drawable/btn_help</item>
+	</style>
+	<style name="imgClock" parent="AppTheme">
+	    <item name="android:layout_width">@dimen/width_clock</item>
+	    <item name="android:layout_height">@dimen/width_clock</item>
+	    <item name="android:background">@drawable/candy_clock</item>
+	</style>
+	<style name="btnKeyboard" parent="AppTheme">
+	    <item name="android:layout_width">@dimen/width_game</item>
+	    <item name="android:layout_height">@dimen/width_game</item>
+	    <item name="android:background">@drawable/btn_keyboard</item>
+	    <item name="android:gravity">center</item>
+	    <item name="android:textSize">@dimen/font_size_game_item</item>
+	</style>
+	<style name="lbYouWin" parent="AppTheme">
+	    <item name="android:textSize">@dimen/font_size_game</item>
+	    <item name="android:textColor">#0087cd</item>
+	</style>
+	<style name="lbYouLose" parent="AppTheme">
+	    <item name="android:textSize">@dimen/font_size_game</item>
+	    <item name="android:textColor">#ff0000</item>
+	</style>
+	<style name="lbBigScore" parent="AppTheme">
+	    <item name="android:textSize">@dimen/font_size_game</item>
+	    <item name="android:textColor">#ff2054</item>
+	</style>
+</resources>

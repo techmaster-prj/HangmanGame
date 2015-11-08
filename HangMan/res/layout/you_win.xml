@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- YOU WIN -->
+	<LinearLayout
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+    	xmlns:tools="http://schemas.android.com/tools"
+	    android:id="@+id/llYouWin"
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="#E6e5f9ff"
+	    android:clickable="false">
+	    <View
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="157" />
+	    <LinearLayout
+		    android:orientation="horizontal"
+		    android:layout_width="fill_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="496">
+            <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="215" />
+            <LinearLayout android:orientation="vertical"
+		    android:layout_width="0dp"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="210"
+		    android:gravity="center|bottom">
+               	<LinearLayout android:orientation="horizontal"
+				    android:layout_width="fill_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="302">
+                    <ImageButton 
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/cup"
+                        android:contentDescription="@string/app_name"/>
+                </LinearLayout>
+                <View
+			        android:layout_width="fill_parent"
+			        android:layout_height="0dp"
+			        android:layout_weight="10" />
+                <LinearLayout android:orientation="vertical"
+				    android:layout_width="fill_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="72"
+				    android:gravity="center|bottom">
+                    <TextView android:id="@+id/lbYouWin"
+                        style="@style/lbBigScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/you_victory"/>
+               	</LinearLayout>
+                <View
+			        android:layout_width="fill_parent"
+			        android:layout_height="0dp"
+			        android:layout_weight="14" />
+                <LinearLayout android:orientation="horizontal"
+				    android:layout_width="fill_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="90">
+                    <View
+			            android:layout_width="0dp"
+			            android:layout_height="fill_parent"
+			            android:layout_weight="60" />
+                    <ImageButton 
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="90"
+                        android:background="@drawable/btn_exit"
+                        android:contentDescription="@string/app_name"
+                        android:onClick="onClickBack"/>
+                    <View
+			            android:layout_width="0dp"
+			            android:layout_height="fill_parent"
+			            android:layout_weight="60" />
+                </LinearLayout>
+            </LinearLayout>
+            <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="215" />
+        </LinearLayout>
+	    <View
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="310" />
+	</LinearLayout>
+	<!-- END YOU WIN -->

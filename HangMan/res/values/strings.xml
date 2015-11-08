@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HangMan</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="lbHangman">Hang Man</string>
+    <string name="lbPlay">Play</string>
+    <string name="lbRanking">Ranking</string>
+    <string name="lbOption">Option</string>
+    <string name="lbExit">Exit</string>
+    <string name="title_activity_play">PlayActivity</string>
+    <string name="title_activity_option">OptionActivity</string>
+    <string name="title_activity_ranking">RankingActivity</string>
+    <string name="top10">Top 10 Online</string>
+    <string name="lbName">Name</string>
+    <string name="lbLevel">Level</string>
+    <string name="lbLevelOne">Level 1</string>
+    <string name="lbBestLevel">Best Level</string>
+    <string name="lbScore">Coins</string>
+    <string name="lbTries">Tries</string>
+    <string name="lbHelp">Help</string>
+	<string name="lbZero">0</string>
+	<string name="you_win">You Win</string>
+	<string name="you_lose">You Lose</string>
+	<string name="you_victory">VICTORY</string>
+	<string name="btnYes">Yes</string>
+	<string name="btnNo">No</string>
+	<string name="lbLanguage">Language</string>
+	<string name="txtLanguage">English</string>
+	<string name="lbSound">Sound</string>
+</resources>

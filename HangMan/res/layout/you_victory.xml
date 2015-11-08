@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- YOU WIN -->
+	<LinearLayout
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+    	xmlns:tools="http://schemas.android.com/tools"
+	    android:id="@+id/llYouWin"
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="#E6e5f9ff"
+	    android:clickable="false">
+	    <View
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="99" />
+	    <LinearLayout
+		    android:orientation="horizontal"
+		    android:layout_width="fill_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="621">
+            <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="215" />
+            <LinearLayout android:orientation="vertical"
+		    android:layout_width="0dp"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="210"
+		    android:gravity="center|bottom">
+               	<LinearLayout android:orientation="horizontal"
+				    android:layout_width="fill_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="307">
+                    <View
+				        android:layout_width="0dp"
+				        android:layout_weight="15"
+				        android:layout_height="fill_parent"/>
+                    <ImageButton 
+                        android:layout_width="0dp"
+                        android:layout_weight="150"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/win"
+                        android:contentDescription="@string/app_name"/>
+                    <View
+				        android:layout_width="0dp"
+				        android:layout_weight="45"
+				        android:layout_height="fill_parent"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical"
+				    android:layout_width="fill_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="205"
+				    android:gravity="center|bottom">
+                    <TextView android:id="@+id/lbYouWin"
+                        style="@style/lbYouWin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/you_win"/>
+                    <TextView  android:id="@+id/lbBigScore"
+                        style="@style/lbBigScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbZero"/>
+                    <TextView android:id="@+id/lbAnswer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/lbYouWin"
+                        android:text="@string/app_name"
+                        android:textColor="#008d74"/>
+               	</LinearLayout>
+                <View
+			        android:layout_width="fill_parent"
+			        android:layout_height="0dp"
+			        android:layout_weight="24" />
+                <LinearLayout android:orientation="horizontal"
+				    android:layout_width="fill_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="90">
+                    <ImageButton 
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="90"
+                        android:background="@drawable/btn_exit"
+                        android:contentDescription="@string/app_name"
+                        android:onClick="onClickBack"/>
+                    <View
+			            android:layout_width="0dp"
+			            android:layout_height="fill_parent"
+			            android:layout_weight="30" />
+                    <ImageButton 
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="90"
+                        android:background="@drawable/btn_next"
+                        android:contentDescription="@string/app_name"
+                        android:onClick="onClickNextLevel"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="215" />
+        </LinearLayout>
+	    <View
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="233" />
+	</LinearLayout>
+	<!-- END YOU WIN -->

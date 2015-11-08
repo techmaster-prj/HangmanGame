@@ -1,0 +1,109 @@
+<!-- YOU LOST -->
+	<LinearLayout 
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+    	xmlns:tools="http://schemas.android.com/tools"
+	    android:id="@+id/llYouLose"
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="#E6e5f9ff">
+	    <View
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="199" />
+	    <LinearLayout
+		    android:orientation="horizontal"
+		    android:layout_width="fill_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="531">
+            <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="215" />
+            <LinearLayout android:orientation="vertical"
+		    android:layout_width="0dp"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="210"
+		    android:gravity="center|bottom">
+               	<LinearLayout android:orientation="horizontal"
+				    android:layout_width="fill_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="167">
+                    <View
+				        android:layout_width="0dp"
+				        android:layout_weight="8"
+				        android:layout_height="fill_parent"/>
+                    <ImageButton 
+                        android:layout_width="0dp"
+                        android:layout_weight="142"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/lose"
+                        android:contentDescription="@string/app_name"/>
+                    <View
+				        android:layout_width="0dp"
+				        android:layout_weight="17"
+				        android:layout_height="fill_parent"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical"
+				    android:layout_width="fill_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="248"
+				    android:gravity="center|bottom">
+                    <TextView android:id="@+id/lbYouLose"
+                        style="@style/lbYouLose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/you_lose"/>
+                    <TextView  android:id="@+id/lbBigScore2"
+                        style="@style/lbBigScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbZero"/>
+                    <TextView android:id="@+id/lbAnswer2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/lbYouLose"
+                        android:text="@string/app_name"
+                        android:textColor="#008d74"/>
+               	</LinearLayout>
+                <View
+			        android:layout_width="fill_parent"
+			        android:layout_height="0dp"
+			        android:layout_weight="24" />
+                <LinearLayout android:orientation="horizontal"
+				    android:layout_width="fill_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="90">
+                    <ImageButton 
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="90"
+                        android:background="@drawable/btn_exit"
+                        android:contentDescription="@string/app_name"
+                        android:onClick="onClickBack"/>
+                    <View
+			            android:layout_width="0dp"
+			            android:layout_height="fill_parent"
+			            android:layout_weight="30" />
+                    <ImageButton 
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="90"
+                        android:background="@drawable/btn_replay"
+                        android:contentDescription="@string/app_name"
+                        android:onClick="onClickReStart"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="215" />
+        </LinearLayout>
+
+	    <View
+	        android:layout_width="fill_parent"
+	        android:layout_height="0dp"
+	        android:layout_weight="280" />
+
+	</LinearLayout>
+	<!-- END YOU LOSE -->

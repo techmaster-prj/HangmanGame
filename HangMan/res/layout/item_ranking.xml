@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+	<TextView android:id="@+id/lbName"
+		style="@style/lbRank_item"
+		android:layout_width="0dp"
+		android:layout_weight="50"
+		android:layout_height="wrap_content"
+		android:text="@string/lbName" />
+
+	<TextView android:id="@+id/lbLevel"
+		style="@style/lbRank_item"
+		android:layout_width="0dp"
+		android:layout_weight="20"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:text="@string/lbLevel" />
+
+	<TextView android:id="@+id/lbScore"
+		style="@style/lbRank_item"
+		android:layout_width="0dp"
+		android:layout_weight="32"
+		android:layout_height="wrap_content"
+		android:paddingLeft="15dp"
+		android:text="@string/lbScore" />
+</LinearLayout>

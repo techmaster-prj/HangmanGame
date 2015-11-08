@@ -1,0 +1,566 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/wrap"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    tools:context=".PlayActivity" >
+
+    <LinearLayout
+        android:id="@+id/llGame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        android:orientation="vertical"
+        >
+
+        <!-- TOP BAR -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="82"
+            android:background="#ffffff"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_marginLeft="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="47"
+                android:layout_height="fill_parent"
+                android:background="#00000000"
+                android:contentDescription="@string/app_name"
+                android:onClick="onClickBack"
+                android:scaleType="centerInside"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:id="@+id/lbLevel"
+                style="@style/lbLevel"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="546"
+                android:gravity="center"
+                android:text="@string/lbLevelOne" />
+
+            <ImageButton
+                android:id="@+id/btnOption"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="47"
+                android:background="#00000000"
+                android:contentDescription="@string/app_name"
+                android:onClick="onClickOption"
+                android:scaleType="centerInside"
+                android:src="@drawable/option" />
+        </LinearLayout>
+        <!-- END TOP BAR -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="878"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="17" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="360"
+                android:orientation="horizontal" 
+                android:paddingTop="10dp">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="160" />
+
+                <ImageView
+                    android:id="@+id/imgHangman"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="320"
+                    android:background="@drawable/hang0"
+                    android:contentDescription="@string/app_name" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="160" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="22" />
+
+            <LinearLayout
+                android:id="@+id/llTextGame"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="top|center"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="70"
+                android:orientation="horizontal" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="109"
+                android:orientation="horizontal" >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="80" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="480"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/lbHelp"
+                            style="@style/lbGame_item"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/txtClock"
+                            android:layout_marginRight="10dp"
+                            android:text="@string/lbHelp" />
+
+                        <ImageButton
+                            android:id="@+id/btnHelp01"
+                            style="@style/btnHelp"
+                            android:layout_alignBottom="@+id/txtClock"
+                            android:layout_marginRight="5dp"
+                            android:layout_toRightOf="@+id/lbHelp"
+                            android:contentDescription="@string/app_name"
+                            android:onClick="onClickHelp" />
+
+                        <ImageButton
+                            android:id="@+id/btnHelp02"
+                            style="@style/btnHelp"
+                            android:layout_alignBottom="@+id/txtClock"
+                            android:layout_marginRight="5dp"
+                            android:layout_toRightOf="@+id/btnHelp01"
+                            android:contentDescription="@string/app_name"
+                            android:onClick="onClickHelp" />
+
+                        <ImageButton
+                            android:id="@+id/btnHelp03"
+                            style="@style/btnHelp"
+                            android:layout_alignBottom="@+id/txtClock"
+                            android:layout_toRightOf="@+id/btnHelp02"
+                            android:contentDescription="@string/app_name"
+                            android:onClick="onClickHelp" />
+
+                        <ImageView
+                            style="@style/imgClock"
+                            android:layout_toLeftOf="@+id/txtClock"
+                            android:contentDescription="@string/app_name" />
+
+                        <TextView
+                            android:id="@+id/txtClock"
+                            style="@style/lbGame_item_red"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/lbZero" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" >
+
+                        <TextView
+                            android:id="@+id/lbScore"
+                            style="@style/lbGame_item"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="@string/lbScore" />
+
+                        <TextView
+                            android:id="@+id/txtScore"
+                            style="@style/lbGame_item"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/lbScore"
+                            android:text="@string/lbZero" />
+
+                        <TextView
+                            style="@style/lbGame_item"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/txtTries"
+                            android:text="@string/lbTries" />
+
+                        <TextView
+                            android:id="@+id/txtTries"
+                            style="@style/lbGame_item"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="@string/lbZero" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="80" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="290"
+                android:orientation="horizontal"
+                android:paddingTop="15dp" >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="75" />
+
+                <GridView
+                    android:id="@+id/gvKeyboard"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="490"
+                    android:columnWidth="@dimen/width_game"
+                    android:gravity="center"
+                    android:horizontalSpacing="3dp"
+                    android:numColumns="auto_fit"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="3dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="75" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <!-- YOU WIN -->
+	<LinearLayout android:id="@+id/llYouWin"
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="#E6e5f9ff"
+	    android:visibility="gone"
+	    android:clickable="false">
+	    <View
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="99" />
+	    <LinearLayout
+		    android:orientation="horizontal"
+		    android:layout_width="fill_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="621">
+            <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="215" />
+            <LinearLayout android:orientation="vertical"
+		    android:layout_width="0dp"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="210"
+		    android:gravity="center|bottom">
+               	<LinearLayout android:orientation="horizontal"
+				    android:layout_width="fill_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="307">
+                    <View
+				        android:layout_width="0dp"
+				        android:layout_weight="15"
+				        android:layout_height="fill_parent"/>
+                    <ImageButton 
+                        android:layout_width="0dp"
+                        android:layout_weight="150"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/win"
+                        android:contentDescription="@string/app_name"/>
+                    <View
+				        android:layout_width="0dp"
+				        android:layout_weight="45"
+				        android:layout_height="fill_parent"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical"
+				    android:layout_width="fill_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="205"
+				    android:gravity="center|bottom">
+                    <TextView android:id="@+id/lbYouWin"
+                        style="@style/lbYouWin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/you_win"/>
+                    <TextView  android:id="@+id/lbBigScore"
+                        style="@style/lbBigScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbZero"/>
+                    <TextView android:id="@+id/lbAnswer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/lbYouWin"
+                        android:text="@string/app_name"
+                        android:textColor="#008d74"/>
+               	</LinearLayout>
+                <View
+			        android:layout_width="fill_parent"
+			        android:layout_height="0dp"
+			        android:layout_weight="24" />
+                <LinearLayout android:orientation="horizontal"
+				    android:layout_width="fill_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="90">
+                    <ImageButton 
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="90"
+                        android:background="@drawable/btn_exit"
+                        android:contentDescription="@string/app_name"
+                        android:onClick="onClickBack"/>
+                    <View
+			            android:layout_width="0dp"
+			            android:layout_height="fill_parent"
+			            android:layout_weight="30" />
+                    <ImageButton 
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="90"
+                        android:background="@drawable/btn_next"
+                        android:contentDescription="@string/app_name"
+                        android:onClick="onClickNextLevel"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="215" />
+        </LinearLayout>
+	    <View
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="233" />
+	</LinearLayout>
+	<!-- END YOU WIN -->
+	<!-- YOU LOST -->
+	<LinearLayout android:id="@+id/llYouLose"
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="#E6e5f9ff"
+	    android:visibility="gone">
+	    <View
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="199" />
+	    <LinearLayout
+		    android:orientation="horizontal"
+		    android:layout_width="fill_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="531">
+            <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="215" />
+            <LinearLayout android:orientation="vertical"
+		    android:layout_width="0dp"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="210"
+		    android:gravity="center|bottom">
+               	<LinearLayout android:orientation="horizontal"
+				    android:layout_width="fill_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="167">
+                    <View
+				        android:layout_width="0dp"
+				        android:layout_weight="8"
+				        android:layout_height="fill_parent"/>
+                    <ImageButton 
+                        android:layout_width="0dp"
+                        android:layout_weight="142"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/lose"
+                        android:contentDescription="@string/app_name"/>
+                    <View
+				        android:layout_width="0dp"
+				        android:layout_weight="17"
+				        android:layout_height="fill_parent"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical"
+				    android:layout_width="fill_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="248"
+				    android:gravity="center|bottom">
+                    <TextView android:id="@+id/lbYouLose"
+                        style="@style/lbYouLose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/you_lose"/>
+                    <TextView  android:id="@+id/lbBigScore2"
+                        style="@style/lbBigScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbZero"/>
+                    <TextView android:id="@+id/lbAnswer2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/lbYouLose"
+                        android:text="@string/app_name"
+                        android:textColor="#008d74"/>
+               	</LinearLayout>
+                <View
+			        android:layout_width="fill_parent"
+			        android:layout_height="0dp"
+			        android:layout_weight="24" />
+                <LinearLayout android:orientation="horizontal"
+				    android:layout_width="fill_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="90">
+                    <ImageButton 
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="90"
+                        android:background="@drawable/btn_exit"
+                        android:contentDescription="@string/app_name"
+                        android:onClick="onClickBack"/>
+                    <View
+			            android:layout_width="0dp"
+			            android:layout_height="fill_parent"
+			            android:layout_weight="30" />
+                    <ImageButton 
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="90"
+                        android:background="@drawable/btn_replay"
+                        android:contentDescription="@string/app_name"
+                        android:onClick="onClickReStart"/>
+                </LinearLayout>
+            </LinearLayout>
+            <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="215" />
+        </LinearLayout>
+	    <View
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="280" />
+	</LinearLayout>
+	<!-- END YOU LOSE -->
+	<!-- YOU VICTORY -->
+	<LinearLayout
+	    android:id="@+id/llYouVictory"
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:background="#E6e5f9ff"
+	    android:visibility="gone">
+	    <View
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="157" />
+	    <LinearLayout
+		    android:orientation="horizontal"
+		    android:layout_width="fill_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="496">
+            <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="215" />
+            <LinearLayout android:orientation="vertical"
+		    android:layout_width="0dp"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="210"
+		    android:gravity="center|bottom">
+               	<LinearLayout android:orientation="horizontal"
+				    android:layout_width="fill_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="302">
+                    <ImageButton 
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/cup"
+                        android:contentDescription="@string/app_name"/>
+                </LinearLayout>
+                <View
+			        android:layout_width="fill_parent"
+			        android:layout_height="0dp"
+			        android:layout_weight="10" />
+                <LinearLayout android:orientation="vertical"
+				    android:layout_width="fill_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="72"
+				    android:gravity="center|bottom">
+                    <TextView android:id="@+id/lbYouVictory"
+                        style="@style/lbBigScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/you_victory"/>
+               	</LinearLayout>
+                <View
+			        android:layout_width="fill_parent"
+			        android:layout_height="0dp"
+			        android:layout_weight="14" />
+                <LinearLayout android:orientation="horizontal"
+				    android:layout_width="fill_parent"
+				    android:layout_height="0dp"
+				    android:layout_weight="90">
+                    <View
+			            android:layout_width="0dp"
+			            android:layout_height="fill_parent"
+			            android:layout_weight="60" />
+                    <ImageButton 
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="90"
+                        android:background="@drawable/btn_exit"
+                        android:contentDescription="@string/app_name"
+                        android:onClick="onClickBack"/>
+                    <View
+			            android:layout_width="0dp"
+			            android:layout_height="fill_parent"
+			            android:layout_weight="60" />
+                </LinearLayout>
+            </LinearLayout>
+            <View
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="215" />
+        </LinearLayout>
+	    <View
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="310" />
+	</LinearLayout>
+	<!-- END VICTORY -->
+	<com.google.ads.AdView
+	    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+	    android:id="@+id/adView"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="bottom"
+	    android:visibility="gone"
+	    ads:adSize="BANNER"
+	    ads:adUnitId="ca-app-pub-5628093915644144/8967263316"
+	    ads:testDevices="TEST_EMULATOR,0913991912"/>
+</FrameLayout>

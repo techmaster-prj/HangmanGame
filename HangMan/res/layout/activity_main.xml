@@ -1,0 +1,107 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/wrap2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_text"
+        android:orientation="vertical"
+        tools:context=".MainActivity" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="342"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="256" />
+
+            <ImageButton
+                android:id="@+id/btnCordage"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="129"
+                android:background="@drawable/cordage" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="255" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="618"
+            android:gravity="top|center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/lbHangman"
+                style="@style/lbHangman"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lbHangman" />
+
+            <LinearLayout
+                android:id="@+id/list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="top|center"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/lbPlay"
+                    style="@style/lbMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickPlay"
+                    android:text="@string/lbPlay" />
+
+                <Button
+                    android:id="@+id/lbRanking"
+                    style="@style/lbMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickRanking"
+                    android:text="@string/lbRanking" />
+
+                <Button
+                    android:id="@+id/lbOption"
+                    style="@style/lbMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickOption"
+                    android:text="@string/lbOption" />
+
+                <Button
+                    android:id="@+id/lbExit"
+                    style="@style/lbMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickExit"
+                    android:text="@string/lbExit" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+	<com.google.ads.AdView
+	    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+	    android:id="@+id/adView"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="bottom"
+	    ads:adSize="BANNER"
+	    ads:adUnitId="ca-app-pub-5628093915644144/8967263316"
+	    ads:testDevices="TEST_EMULATOR,0913991912"/>
+
+</FrameLayout>
